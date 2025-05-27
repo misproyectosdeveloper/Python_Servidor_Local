@@ -17,7 +17,15 @@ def get_articulos():
     articulos = [dict(row) for row in cursor.fetchall()]
     conn.close()
     return jsonify(articulos)
-
+    
+@app.route('/articulos2', methods=['GET'])
+def get_articulos2():
+    conn = get_db_connection()
+    cursor = conn.execute('SELECT * FROM articulos')
+    articulos2 = [dict(row) for row in cursor.fetchall()]
+    conn.close()
+    return jsonify(articulos2)
+    
 @app.route('/clientes', methods=['GET'])
 def get_clientes():
     conn = get_db_connection()
