@@ -34,5 +34,14 @@ def get_Ventas():
     conn.close()
     return jsonify(Ventas)
 
+@app.route('/Categorias', methods=['GET'])
+def get_Categorias():
+    conn = get_db_connection()
+    cursor = conn.execute('SELECT * FROM Categorias')
+    Categorias = [dict(row) for row in cursor.fetchall()]
+    conn.close()
+    return jsonify(Categorias)
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
