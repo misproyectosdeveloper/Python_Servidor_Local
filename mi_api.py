@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 DATABASE = 'db1.db1'
 DATABASE = 'db2.db2'
+DATABASE = 'db3.db3'
 
 def get_db_connection():
     conn = sqlite3.connect(DATABASE)
