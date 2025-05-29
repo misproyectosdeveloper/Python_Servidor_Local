@@ -8,7 +8,7 @@ DATABASE = 'db2.db2'
 DATABASE = 'db3.db3'
 DATABASE = 'db4.db4'
 DATABASE = 'db5.db5'
-
+DATABASE = 'db6.db6'
 
 def get_db_connection():
     conn = sqlite3.connect(DATABASE)
